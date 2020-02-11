@@ -1,0 +1,299 @@
+﻿版本信息
+Microsoft JDBC Driver 7.4 for SQL Server
+2019 年 8 月
+
+------------
+简介
+------------
+此文件包含最新或其他重要信息，是 Microsoft JDBC  
+Driver 7.2 for SQL Server 文档。在安装 JDBC 驱动程序之前，应 
+通读此文件。
+
+你的反馈对我们非常重要，我们将力求即时对你的反馈 
+做出回复。有关使用 JDBC 驱动程序博客和在线论坛提供反馈的信息，
+请参阅 Microsoft JDBC Driver 7.4 for SQL Server 页面，网址为 https://aka.ms/mssql-jdbc-feedback
+
+
+------------
+安装
+------------
+install.txt 中提供了有关安装 JDBC 驱动程序的说明。请参阅该文件，了解 
+有关在 Windows、Unix 和 Mac 操作系统上安装 JDBC 驱动程序的详细信息。
+
+
+---------------------------
+支持的操作系统
+---------------------------
+Microsoft JDBC Driver 7.4 for SQL Server 支持的操作系统包括：
+  Windows Server 2008 SP2
+  Windows Server 2008 R2 SP1
+  Windows Server 2012
+  Windows Server 2012 R2
+  Windows Server 2016
+  Windows Server 2019
+  Windows 8
+  Windows 8.1
+  Windows 10
+  Linux
+  Mac
+
+上面的列表是某些受支持的操作系统的示例。JDBC 驱动程序 
+可在任何支持使用 Java 虚拟机 (JVM) 的操作系统上工作。
+
+但仅对 Linux 和 Mac OS（Ubuntu 19.04、Ubuntu 18.10、CentOs 7、Suse 12、
+macOS 10.14）的最新操作系统测试了兼容性和支持功能。
+
+
+-----------------------
+支持的 Java 版本
+-----------------------
+Microsoft JDBC Driver 7.4 for SQL Server 已经过测试且支持最新版的 Java 
+开发套件 (JDK) 在上述受支持的操作系统上基于 Open JDK 和 Zulu 构建而来。
+支持 Java Runtime Environment (JRE) 系统库的以下系列版本：
+
+  ----------------------------------------------------------------------
+  JRE 系列版本 | 可实现最大程度支持的驱动程序 JAR
+  ----------------------------------------------------------------------
+  8+                 | mssql-jdbc-7.4.1.jre8.jar
+  11+                | mssql-jdbc-7.4.1.jre11.jar
+  12+                | mssql-jdbc-7.4.1.jre12.jar
+
+
+----------------
+版本内容
+----------------
+Microsoft JDBC Driver 7.4 for SQL Server 可执行 zip 或 tar 文件将解压缩出以下文件 
+在指定位置（相对于选定的安装目录）解包以下文件：
+
+<安装目录>\sqljdbc_<版本>\<语言>\install.txt
+<安装目录>\sqljdbc_<版本>\<语言>\release.txt
+<安装目录>\sqljdbc_<版本>\<语言>\license.txt
+<安装目录>\sqljdbc_<版本>\<语言>\thirdpartynotices.txt
+<安装目录>\sqljdbc_<版本>\<语言>\mssql-jdbc-7.4.1.jre8.jar
+<安装目录>\sqljdbc_<版本>\<语言>\mssql-jdbc-7.4.1.jre8-shaded.jar
+<安装目录>\sqljdbc_<版本>\<语言>\mssql-jdbc-7.4.1.jre11.jar
+<安装目录>\sqljdbc_<版本>\<语言>\mssql-jdbc-7.4.1.jre11-shaded.jar
+<安装目录>\sqljdbc_<版本>\<语言>\mssql-jdbc-7.4.1.jre12.jar
+<安装目录>\sqljdbc_<版本>\<语言>\mssql-jdbc-7.4.1.jre12-shaded.jar
+<安装目录>\sqljdbc_<版本>\<语言>\auth\x86\sqljdbc_auth.dll
+<安装目录>\sqljdbc_<版本>\<语言>\auth\x64\sqljdbc_auth.dll
+<安装目录>\sqljdbc_<版本>\<语言>\samples\<示例文件...>
+<安装目录>\sqljdbc_<版本>\<语言>\xa\xa_install.sql
+<安装目录>\sqljdbc_<版本>\<语言>\xa\x86\sqljdbc_xa.dll
+<安装目录>\sqljdbc_<版本>\<语言>\xa\x64\sqljdbc_xa.dll
+
+有关每个组件的详细信息，请参阅联机文档 
+Microsoft JDBC Driver for SQL Server 文档：
+https://msdn.microsoft.com/en-us/library/dn197850(v=sql.10).aspx
+
+
+-------------
+文档
+-------------
+此包中包括版本信息、安装说明以及许可条款。
+联机可找到所有其他文档。
+
+请注意，已中止脱机帮助文件。
+
+
+---------
+JAR 文件
+---------
+为支持后向兼容性和可能的升级方案，JDBC Driver 7.4 的 
+每个安装包中有三个 JAR 类库：
+	mssql-jdbc-7.4.1.jre8.jar
+	mssql-jdbc-7.4.1.jre11.jar
+	mssql-jdbc-7.4.1.jre12.jar
+
+
+----------------------
+特定于功能的文件
+----------------------
+Azure Active Directory 和集成身份验证（在 Windows 上）组件包含在  
+'auth' 目录中。
+
+JDBC 分布式事务组件包含在“xa”目录中。
+
+
+--------------------
+功能依赖关系
+--------------------
+Microsoft JDBC Driver 7.4 for SQL Server 中的一些功能依赖于 
+下列外部库：
+
+1.结合使用“Always Encrypted”与 Azure Key Vault 提供程序
+   依赖库：azure-keyvault（版本 1.2.1）、adal4j（版本 1.6.4）
+   和 client-runtime（版本 1.6.10）
+   
+2.在 Windows、Linux 和 Mac 操作系统中使用“Azure Active Directory 集成身份验证”
+   依赖库：adal4j（版本 1.6.4）和 client-runtime（版本 1.6.10）
+   
+3.使用“useFmtOnly”检索参数元数据
+   依赖库：antlr-runtime（版本 4.7.2）
+
+有关在标准 Java 应用程序或 Maven 应用程序中包含这些依赖库的详细信息 
+可在此处找到：https://go.microsoft.com/fwlink/?linkid=867575
+
+
+-------
+示例
+-------
+说明 JDBC 驱动程序各项功能的示例应用程序包含在“samples”
+"sample"目录中。有关每个示例以及如何运行它们的详细信息，请参阅联机 
+文档。
+
+
+-----------
+更改列表
+-----------
+从 7.2.2.0 到 7.4.1.0 的更改
+- 添加了对 NTLM 身份验证的支持。
+- 添加了新的连接属性“useFmtOnly”，用于检索参数元数据。
+- 通过额外的“jre12”JAR 添加了对 JDK 12 的支持。
+- 添加了“keyVaultProviderClientId”和“keyVaultProviderClientKey”连接属性，以增强 Always Encrypted 的可用性。
+- 添加了 Maven Shade Plugin 配置，以在 uber-jar 中打包驱动程序 jar 及其所有依赖项。
+- 在“SQLServerBulkCopy”中添加了支持，以在对象创建过程中允许“PooledConnection”/“XAConnection”实例。
+- 使用“RowSet”时，在“SQLServerBulkCopy”中添加了对 FLOAT 数据类型的支持。
+- 引入了新的 Maven 依赖项“ANTLR 4 运行时”（版本：4.7.2）。
+- 已将“适用于 Java 的 Microsoft Azure Active Directory 身份验证库 (ADAL4J)”的 Maven 依赖项更新为
+库的 1.6.4 版本。
+- 已将“适用于 AutoRest 的 Java 客户端运行时”的 Maven 依赖项更新为库的 1.6.10 版本。
+- 已将“Microsoft Azure Key Vault SDK for Java”的 Maven 依赖项更新为库的 1.2.1 版本，
+该版本还从 Maven 依赖项中删除了“Microsoft Azure SDK for Key Vault WebKey”。
+- 已将“OSGi Core”的 Maven 依赖项更新为库的 6.0.0 版本。
+- 已将“OSGi Compendium”的 Maven 依赖项更新为库的 5.0.0 版本。
+
+改进：
+- 改进了“SQLServerParameterMetadata”API 实现防止“NullPointerException”。
+- 删除了“Enum.values()”调用以避免不必要的数组克隆，从而提升了性能。
+- 通过持续清理存储在内部映射中的“Activityid”，提升了驱动程序的性能。
+- 提升了“SQLServerDataTable.internalAddRow()”方法的性能。
+- 通过消除不必要的对象创建，提升了多个“SQLServerBulkCopy”和“PreparedStatement”方法的性能。
+
+Bug 修复：
+- 修复了“DatabaseMetadata.getColumns()”API，使其根据 JDBC 4.3 规范返回“ResultSet”。
+- 默认将某些空间数据类型标记为有效，从而修复了这些类型无效的问题。
+- 修复了登录超时未适当应用的问题。
+- 修复了“SharedTimer”实现，使其使用类级别锁以确保线程安全。
+- 修复了“SQLServerDatabaseMetadata.getMaxConnections()”API 查询的相关问题。
+- 修复了读取警告时使用下一个“ResultSet”的问题。
+- 修复了“SQLServerPreparedStatement”中的异常处理，以使其与“SQLServerStatement”一致。
+- 修复了“SQLServerCallableStatement”实现中的误导性异常消息。
+- 修复了“SQLServerConnection”中的“SELECT_METHOD”，使其不会两次获取相同的连接属性。
+- 修复了“SQLServerConnection.isValid()”API 中可能存在的语句泄漏。
+- 修复了向 SQL Server 2016 及更高版本插入日期/时间值时的舍入行为。
+- 修复了“SQLServerConnection.abort()”API 行为以一致地清除资源。
+- 修复了“SQLException”错误状态长度，以遵从 SQLSTATE 标准。
+
+从 7.2.1.0 到 7.2.2.0 的更改：
+Bug 修复：
+- 修复了无法正确清除 ActivityID 的问题。
+
+从 7.2.0.0 到 7.2.1.0 的更改：
+Bug 修复：
+- 修复了分析某些参数化查询的问题。
+
+从 7.0.0.0 到 7.2.0.0 的更改：
+- 借助最新版的 Java SE 11 (18.9 LTS)，驱动程序现支持 Java 11 且发布 
+兼容项目。
+- 已将“适用于 Java 的 Microsoft Azure Active Directory 身份验证库 (ADAL4J)”的 Maven 依赖项更新为
+库的 1.6.3 版本，后者还引入“适用于 AutoRest 的 Java 客户端运行时”作为 Maven 
+依赖项（版本：1.6.5）。
+- 已将“Microsoft Azure Key Vault SDK for Java”的 Maven 依赖项更新为库的 1.2.0 版本，
+后者还引入了“Microsoft Azure SDK for Key Vault WebKey”作为 Maven 依赖项（版本：1.2.0）。
+- 通过在驱动程序中引入“ActiveDirectoryMSI”身份验证选项， 
+现支持在 Azure 环境中使用系统分配和用户分配的标识 
+进行 Active Directory 托管服务标识 (MSI) 身份验证。
+- 通过添加面向 DataSourceFactory 和 OSGI 框架的 API，引入了对驱动程序的 OSGi 支持。
+- 添加了新的 API 来检索随附 SQLServerException 一并收到的 SQL Server 错误信息。
+- 现支持在完全读取 ResultSet 之后读取从 SQL Server 收到的 SQL 警告。
+- 添加了新的 SQLServerMetaData 构造函数来接受要作为列数据传递的字符串的长度。
+- 现支持要在“ResultSet.getObject()”API 中作为“type”传递的“java.time.LocalDate”、 
+“java.time.LocalTime”、“java.time.LocalDateTime”和“java.time.OffsetDateTime”。
+- 添加了面向 Clob.getAsciiStream() API 的流式处理功能。
+- 更新了“SQLServerDatabaseMetaData”中的 SQL 关键字列表，使其与 Transact-SQL 文档中 
+包含保留关键字的最新列表相匹配。
+
+改进：
+- 通过简化记录器实现，提升了 Always Encrypted 的驱动程序性能。
+- 提升了“readLong()”函数的性能。
+- 改进了“SQLServerDatabaseMetadata”实现以防止“语句”泄露并增强 
+“PreparedStatement”缓存。
+- 改进了查询超时逻辑以使用单个线程。
+- 针对建立连接时出现的间歇性 TLS1.2 问题改进了重试逻辑。
+
+Bug 修复：
+- 修复了 SSL 证书验证以采用证书中的通配符。
+- 解决了使用联合身份验证模式连接到 Azure 数据库或 Azure 数据仓库时 
+驱动程序每 15 分钟重新连接一次的问题。
+- 解决了语句外泄的问题并改进了“SQLServerParameterMetadata”中的异常处理操作。
+- 解决了“java.time.OffsetDateTime”和“java.time.OffsetTime”值发送到受默认客户端时区影响的服务器 
+的问题。
+- 修复了在获取流之后调用“length()”会关闭 Clob/NClob 流这一 bug。
+- 解决了 Clob/NClob 数据类型编码问题，并修复了“SQLServerClob”以使用“StandardCharsets.US_ASCII” 
+而不是硬编码的字符串。
+- 解决了在调用“ResultSet.wasNull()”时驱动程序要填充 Lob 的问题。
+- 解决了大容量复制异常处理方面的问题。
+- 解决了在 SQL 查询和公共 API 中提供的表名称包含单引号时 
+驱动程序功能方面的问题。
+- 修复了“logException()”内部方法中的潜在 NullPointerException。
+- 修复了“useBulkCopyForBatchInserts”API 以采用语言超时值。
+- 修复了“useBulkCopyForBatchInserts”API，从而在使用不受支持的数据类型对 Azure 数据仓库 
+执行大容量复制操作时切换到批量插入。
+- 解决了“Geography.point()”颠倒坐标的问题。
+- 解决了在针对 Azure 数据仓库运行时“setAutoCommit()”不关闭事务的问题。
+- 解决了非最终字段上的同步问题。
+- 解决了在数据超出 DECIMAL/NUMERIC 类型范围时驱动程序引发错误消息的问题。
+- 在执行 Kerberos 身份验证时无需再通过反射来访问内部 JDK 类。
+
+------------
+已知问题
+------------
+下面是 Microsoft JDBC Driver 7.4 for SQL Server 的已知问题：
+
+1) 使用 SQL Server 2008 或 2008 R2 时的参数元数据限制
+
+1.a) PreparedStatement.getParameterMetadata() 在与参数化 MERGE 查询一起使用
+时引发 SQLException。
+
+1.b) 预定义语句的参数元数据不适用于具有子查询/联接的查询。
+
+
+2) 与 SQL AZURE 的连接被断开
+
+连接到 SQL Azure 时，空闲连接在处于不活动状态一定时间后可能被某个 
+网络组件（如防火墙）终止。若要避免通过网络组件断开空闲连接，
+应在加载驱动程序的操作系统上设定以下注册表 
+设置（或其非 Windows 等效项）：
+           
+注册表设置                                                                   推荐值
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\KeepAliveTime            30000
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\KeepAliveInterval         1000
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\TcpMaxDataRetransmission  10
+
+
+3) 当结合使用 TVP 和 SQL_VARIANT 时 
+
+3.a) 日期值
+
+当使用 TVP 填充一个表时，且该表包含 sql_variant 列中存储的 datetime/smalldatetime/date 值，
+在 ResultSet 上调用 getDateTime()/getSmallDateTime()/getDate() 将不起作用，并引发以下异常：
+
+	java.lang.String 不能强制转换为 java.sql.Timestamp
+
+解决方法：改为使用 getString() 或 getObject()。
+
+3.b) 对于 NULL 值，结合使用 TVP 与 SQL_VARIANT
+
+如果使用 TVP 填充一个表，并将 NULL 值发送给 sql_variant 列类型，会引发
+异常，因为当前不支持在 TVP 中对列类型 sql_variant 插入 NULL 值。
+
+
+4) 使用 NTLM 身份验证时
+
+目前不支持同时启用扩展保护和加密连接。
+
+5) 使用 useFmtOnly 时
+
+此功能存在一些问题，是由 SQL 分析逻辑中的缺陷导致的。
+请参阅 https://docs.microsoft.com/en-us/sql/connect/jdbc/using-usefmtonly，了解有关详细信息和解决方法建议。

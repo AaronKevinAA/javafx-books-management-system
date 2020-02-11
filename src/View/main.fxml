@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="496.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.MainController">
+   <children>
+      <MenuBar prefHeight="25.0" prefWidth="780.0" />
+      <TreeView fx:id="treeView" layoutY="172.0" onMouseClicked="#TreeViewClick" prefHeight="324.0" prefWidth="193.0" AnchorPane.bottomAnchor="0.0" />
+      <ScrollPane fx:id="scrollPane" layoutX="193.0" layoutY="25.0" prefHeight="471.0" prefWidth="587.0">
+        <content>
+          <AnchorPane fx:id="pane_under_scroll" minHeight="0.0" minWidth="0.0" prefHeight="468.0" prefWidth="584.0" />
+        </content>
+      </ScrollPane>
+      <AnchorPane layoutY="25.0" prefHeight="148.0" prefWidth="193.0" style="-fx-background-color: #3242;">
+         <children>
+            <Circle fill="DODGERBLUE" layoutX="97.0" layoutY="49.0" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
+            <Label fx:id="info_name" layoutX="59.0" layoutY="95.0" text="name" />
+            <Label fx:id="info_class" layoutX="59.0" layoutY="119.0" text="class" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TitledPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="468.0" prefWidth="584.0" text="查找书籍" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.findBookController">
+   <content>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <TextField fx:id="find_name" layoutX="20.0" layoutY="15.0" prefHeight="23.0" prefWidth="235.0" promptText="书名" />
+            <TextField fx:id="find_author" layoutX="284.0" layoutY="15.0" prefHeight="23.0" prefWidth="182.0" promptText="作者" />
+            <Button fx:id="find_btn" layoutX="488.0" layoutY="14.0" mnemonicParsing="false" onAction="#findBook" text="查找书籍" />
+            <TableView fx:id="find_table" layoutX="19.0" layoutY="53.0" prefHeight="368.0" prefWidth="531.0" />
+         </children>
+      </AnchorPane>
+   </content>
+</TitledPane>
